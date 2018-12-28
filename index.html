@@ -1,0 +1,195 @@
+<!doctype html>
+<!-- https://wireframe.cc/1KMR0K -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>SMA Negeri 12 Bandung</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
+    <link rel="shortcut icon" href="assets/images/logo-12-transparent-50px.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/col.css">
+    <link rel="stylesheet" href="assets\jquery-ui-1.12.1\jquery-ui.min.css"></script>
+    <script src="assets\jquery-ui-1.12.1\external\jquery\jquery.js"></script>
+    <script src="assets\jquery-ui-1.12.1\jquery-ui.min.js"></script>
+    <style type="text/css">
+        .f-nav{  /* To fix main menu container */
+            z-index: 9999;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+        </style>
+        <script>
+            /* jam */
+            $(document).ready(function(){
+                    setInterval(function(){
+                        var date = new Date();
+                        $('#tampilanJam').html("Jam Sekarang : "+date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}));
+                    },1000);
+
+            });
+
+            /* progres bar*/
+            $( function() {
+                var progressbar = $( "#progressbar" ),
+                    progressLabel = $( ".progress-label" );
+                    wrapper = $( "#wrapper" );
+                    awal = $( "#awal" );
+                    white = $("#white");
+                    progressbar.progressbar({
+                        value: false,
+                            change: function() {
+                                progressLabel.text( progressbar.progressbar( "value" ) + "%" );
+                                wrapper.hide();
+                            },
+                        complete: function() {
+                    progressLabel.text( "Complete!" );
+                    progressbar.hide();
+                    awal.hide();
+                    white.hide();
+                    wrapper.show();
+                    
+                }
+            });
+            function progress() {
+                var val = progressbar.progressbar( "value" ) || 0;
+                    progressbar.progressbar( "value", val + 2 );
+                if ( val < 99 ) {
+                    setTimeout( progress, 80 );
+                }
+            }
+                setTimeout( progress, 2000 );
+            } );
+  </script>
+        </script>
+</head>
+
+<body> <!--
+    <div id="white">
+        <div id="progressbar">
+            <div class="progress-label">Loading...</div>
+        </div>
+    </div>-->
+    <div id="wrapper" class="clearfix">
+        <header>
+            <div id="jam">
+                <span id="tampilanJam"></span>
+            </div>
+            <div id="kepala">
+                <div id="logo">
+                    <img src="assets/images/logo-12-panjang.png">
+                </div>
+                <div id="alamat" class="clearfix">
+                    <p>Alamat :	Jl. Sekejati no 36, Bandung, West Java, Indonesia</p>
+                    <p>Telp. 022-7310256</p>
+                </div>
+            </div>
+        </header>
+        <nav id="primary">
+            <ul> 
+                <li style="background-color:#9178F2;border-radius: 5px">
+                    <a href="index.html">Home</a></li> 
+                    <li>
+                        Profil
+                        <ul class="submenu"> 
+                            <li><a href="guru.html">Daftar Guru</a></li> 
+                            <li><a href="murid.html">Daftar Murid</a></li> 
+                            <li><a href="fasilitas.html">Fasilitas</a></li>
+                        </ul>
+                    </li>
+                <li><a href="galeri.html">Galeri</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="content-wrapper">
+            <div id="carousel">
+                halo
+            </div>
+            <div id="motivasi">
+                <blockquote>
+                    "Tut Wuri Handayani"
+                </blockquote>
+                <p>- Ki Hajar Dewantara</p>
+            </div>
+            <div id="midpoint">
+                <div id="mars">
+                    Mars SMAN 12 Bandung
+                    <audio id="audio" src="assets/music/mars12.mp3" controls></audio> 
+                </div>
+                <div id="pendapat">
+                    <fieldset>
+                        <legend>Pendapat</legend>
+                        <p>Bagaimana tampilan web ini ?</p>
+                        <form class="pendapat">
+                            <label for="answer">Bagus</label>
+                            <input type="radio" name="answer" id="bagus">
+                            <label for="answer">Kurang</label>
+                            <input type="radio" name="answer" id="kurang">
+                            <button id="book" type="reset">Kirim</button>
+                        </form>
+                    </fieldset>
+                </div>
+            </div>
+            <div id="content">
+                <div id="column">
+                    <div id="konten">
+                        <h2>Ini Judul</h2>
+                        <div id="mini">
+                            <h3>Artikel</h3>
+                            <p>aaa</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="column">
+                    <div id="konten">
+                        <h2>Ini Judul</h2>
+                        <div id="mini">
+                            <h3>Artikel</h3>
+                            <p>aaa</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="column">
+                    <div id="konten">
+                        <h2>Ini Judul</h2>
+                        <div id="mini">
+                            <h3>Artikel</h3>
+                            <p>aaa</p>
+                        </div>
+                        <div id="mini">
+                            <h3>Artikel</h3>
+                            <p>aaa</p>
+                        </div>
+                        <div id="mini">
+                            <h3>Artikel</h3>
+                            <p>aaa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="clearfix, fit">
+            <div id="footer-column"> 
+                <h2>Tentang Author</h2> 
+                    Dibuat oleh M. Luthfi Zulfikar (K3517039)<br>
+                    Untuk melihat postingan pribadi saya, bisa kunjungi <a 
+                    href="http://zulfikarskywalker.wordpress.com" target="_BLANK">zulfikarskywalker.wordpress.com</a>
+            </div> 
+            <div id="footer-column"> 
+                <h2>Hubungi Saya</h2> 
+                    Jl. Pinggir Jalan<br> 
+                    Bandung 123456 Jawa Barat<br> 
+                    (+6281) 2345678 
+            </div> 
+            <div id="footer-column"> 
+                <h2>Temukan Saya di ...</h2> 
+                <a href="http://facebook.com/lzulfikar22" target="_BLANK">Facebook</a><br> 
+                <a href="http://twitter.com/harunaoi"target="_BLANK" >Twitter</a> 
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
