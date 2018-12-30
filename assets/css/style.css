@@ -7,8 +7,8 @@ F4F0F1
 */
 
 @font-face{ 
-    font-family:"Blenda Script"; 
-    src:url("../fonts/BlendaScript.otf");
+    font-family:"coolvetica"; 
+    src:url("../font/coolvetica/coolvetica rg.ttf");
     font-weight:normal; 
     } 
 
@@ -41,8 +41,12 @@ header {
     background-color: whitesmoke;
 }
 header #jam{
-    height: 20px;
-    background-color: aqua;
+    height: 23px;
+    background-color: tomato;
+}
+
+header #jam #tampilanJam{
+    margin-left: 10px;
 }
 
 header #kepala{
@@ -71,9 +75,17 @@ header #kepala #alamat p{
     padding-right: 10px;
 }
 /*menu primary */
+.active {
+    background-color: #F1C7A3;
+}
+
+.active a{
+    color: #000000
+}
+
 #primary{  
     overflow:auto;
-    background-color: #2D2053;
+    background-color: tomato;
 }
 #primary ul{ 
     list-style:none; 
@@ -83,13 +95,11 @@ header #kepala #alamat p{
     padding:0px;
 } 
 #primary ul li{ 
-    color: #fff;
+    color: #000000;
     display:block; 
     padding:5px 10px 5px 10px; 
     float:left; 
     margin:0px; 
-    transition: 1s;
-    transition-timing-function: ease-out;
 } 
 #primary ul li .submenu{ 
     display:none;
@@ -99,11 +109,9 @@ header #kepala #alamat p{
     width:120px;
     position: absolute;
     margin-top:5px; 
-    border:#5B45BC 1px solid; 
-    border-radius: 1px;
-    background:#2D2053; 
-    margin-left:-11px; 
-    border-radius: 5px;
+    border:#F1C7A3 1px solid;
+    background: tomato; 
+    margin-left:-11px;
 } 
 #primary ul li:hover .submenu li{ 
     display:block; 
@@ -113,23 +121,18 @@ header #kepala #alamat p{
     border:none;
 } 
 #primary ul li:hover{ 
-    background:#9178F2; 
-    border-radius: 5px;
-    transition: 0.5s;
-    transition-timing-function: ease-out;
+    background:#F1C7A3;
 } 
 #primary ul li:hover a{ 
-    color: #EEEEEE;
+    color: #000000;
 } 
 #primary ul li a{ 
-    color:#EEEEEE;
+    color:#000000;
     text-decoration:none; 
-    transition: 0,5s;
 } 
 #primary ul li a:hover{ 
     text-decoration:underline;
-    color: #EEEEEE;
-    transition: 0,5s;
+    color: #000000;
 } 
 /* content Wrapper */
 #content-wrapper {
@@ -148,15 +151,26 @@ header #kepala #alamat p{
 /* motivasi */
 
 #motivasi {
-    background-color: red;
     height: 98px;
     text-align: center;
+}
+
+#borderimg{
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url(../images/border.png) 30 round; 
 }
 
 /* pertengahan */
 
 #midpoint {
+    padding: 10px;
     height: 100px;
+    background-color: whitesmoke;
+    border-top-style: dashed;
+    border-bottom-style: dashed;
+    border-width: 2px;
+    border-color: #D75A4D;
 }
 
 #midpoint p{
@@ -169,22 +183,26 @@ header #kepala #alamat p{
 #midpoint #mars {
     height: 98px;
     width: 50%;
-    background-color: #555;
     float: left;
+    text-align: center;
+    font-family: coolvetica;
 }
 
 #midpoint #mars audio{
+    border-style: dashed;
+    border-width: 3px;
     width: 80%;
     height: 40px;
     margin: 10px 20px;
+    border-color: #D75A4D;
 }
 
 /* control group */
 
 #midpoint #pendapat {
+    font-family: coolvetica;
     height: 98px;
     width: 50%;
-    background-color: #888;
     float: left;
 }
 
@@ -230,11 +248,11 @@ header #kepala #alamat p{
 /* footer */
 footer {
     padding: 0px 50px 30px 50px;
-    background-color: whitesmoke;
+    background-color: tomato;
 }
 
 footer #footer-column{
-    color: #2D2053;
+    color: #ffffff;
     float: left;
     width: 33.3%;
 }
