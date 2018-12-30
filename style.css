@@ -1,0 +1,340 @@
+/* Color
+EES659
+D75A4D
+F1C7A3
+F5DC77
+F4F0F1
+*/
+
+@font-face{ 
+    font-family:"coolvetica"; 
+    src:url("../font/coolvetica/coolvetica rg.ttf");
+    font-weight:normal; 
+    } 
+
+.f-nav{  /* To fix main menu container */
+    z-index: 9999;
+    position: fixed;
+}
+
+#white{
+    padding-top: 300px;
+    margin: -10px;
+    background-color: #fff;
+    z-index: 9999;
+    height: 2048px;
+    width: 100%;
+    position: absolute;
+}
+/* wrapper */
+#wrapper{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 1024px;
+    margin: 0px auto;
+    box-shadow: 0px 0px 20px #ccc;
+}
+
+/* header */
+
+header {
+    margin: 0px;
+    background-color: whitesmoke;
+}
+header #jam{
+    height: 23px;
+    background-color: tomato;
+}
+
+header #jam #tampilanJam{
+    margin-left: 10px;
+}
+
+header #kepala{
+    height: 120px;
+    margin: 0px auto;
+}
+
+header #kepala #logo{
+    margin-top: auto 10px;
+    width: 40%;
+    float: left;
+}
+
+header #kepala #logo img{
+    margin:35px 10px ;
+    float: left;
+}
+
+header #kepala #alamat{
+    overflow: auto;
+    float: right;
+}
+
+header #kepala #alamat p{
+    text-align: right;
+    padding-right: 10px;
+}
+/*menu primary */
+.active {
+    background-color: #F1C7A3;
+}
+
+.active a{
+    color: #000000
+}
+
+#primary{  
+    overflow:auto;
+    background-color: tomato;
+}
+#primary ul{ 
+    list-style:none; 
+    float:left; 
+    overflow:auto; 
+    margin:0px; 
+    padding:0px;
+} 
+#primary ul li{ 
+    color: #000000;
+    display:block; 
+    padding:5px 10px 5px 10px; 
+    float:left; 
+    margin:0px; 
+} 
+#primary ul li .submenu{ 
+    display:none;
+} 
+#primary ul li:hover .submenu{ 
+    display: block;
+    width:120px;
+    position: absolute;
+    margin-top:5px; 
+    border:#F1C7A3 1px solid;
+    background: tomato; 
+    margin-left:-11px;
+} 
+#primary ul li:hover .submenu li{ 
+    display:block; 
+    width:110px; 
+    padding:5px; 
+    float:left; 
+    border:none;
+} 
+#primary ul li:hover{ 
+    background:#F1C7A3;
+} 
+#primary ul li:hover a{ 
+    color: #000000;
+} 
+#primary ul li a{ 
+    color:#000000;
+    text-decoration:none; 
+} 
+#primary ul li a:hover{ 
+    text-decoration:underline;
+    color: #000000;
+} 
+/* content Wrapper */
+#content-wrapper {
+    width: 960px;
+    margin: 20px auto;
+}
+/* carousel */
+
+#carousel {
+    background-color: aqua;
+    width: 100%;
+    height: 340px;
+
+}
+
+/* motivasi */
+
+#motivasi {
+    height: 98px;
+    text-align: center;
+}
+
+#borderimg{
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url(../images/border.png) 30 round; 
+}
+
+/* pertengahan */
+
+#midpoint {
+    padding: 10px;
+    height: 100px;
+    background-color: whitesmoke;
+    border-top-style: dashed;
+    border-bottom-style: dashed;
+    border-width: 2px;
+    border-color: #D75A4D;
+}
+
+#midpoint p{
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+/* audio */
+
+#midpoint #mars {
+    height: 98px;
+    width: 50%;
+    float: left;
+    text-align: center;
+    font-family: coolvetica;
+}
+
+#midpoint #mars audio{
+    border-style: dashed;
+    border-width: 3px;
+    width: 80%;
+    height: 40px;
+    margin: 10px 20px;
+    border-color: #D75A4D;
+}
+
+/* control group */
+
+#midpoint #pendapat {
+    font-family: coolvetica;
+    height: 98px;
+    width: 50%;
+    float: left;
+}
+
+#midpoint #pendapat fieldset {
+    border-color : tomato;
+}
+
+/* content */
+#content {
+    background-color: black;
+    height:auto;
+}
+
+#content #column {
+    width: 320px;
+    float: left;
+    margin: auto;
+}
+#content #column h2{
+    margin-left: -10px;
+    padding-left: 10px;
+    background-color: black;
+    color: white;
+    height: 36px;
+}
+
+#content #column #konten{
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    background-color: whitesmoke;
+}
+
+#mini {
+}
+
+#content #column #konten #mini h3{
+    border-bottom-style: dashed;
+    border-width: 0.5px;
+    border-color: #ccc;
+}
+
+#content #column #konten #mini p{
+    border-bottom-style: dashed;
+    border-width: 0.5px;
+    border-color: #ccc;
+}
+/* footer */
+footer {
+    padding: 0px 50px 30px 50px;
+    background-color: tomato;
+}
+
+footer #footer-column{
+    color: #ffffff;
+    float: left;
+    width: 33.3%;
+}
+
+footer #footer-column a{
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+
+/* clearing float */
+.clearfix {
+    overflow: auto;
+ }
+.clearfix::after {
+   content: "";
+   clear: both;
+   display: table;
+ }
+
+.ui-progressbar {
+    position: relative;
+    width: 100%;
+  }
+.progress-label {
+    position: absolute;
+    left: 50%;
+    top: 4px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #fff;
+  }
+
+.fit { 
+    width:100%;
+    padding-right:10px;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box;     
+    box-sizing: border-box; 
+
+}
+ /* 700 */
+ @media screen and (max-width:700px) {
+    #wrapper { width: 100%;}
+    header #kepala #logo{width: 100%;}
+    header #kepala #alamat{width: 100%;}
+    header #kepala #alamat p{text-align: center;}
+    #primary {width: 100%;}
+    #content-wrapper{width: 90%;}
+    #content #column {width: 100%;}
+    #content #column #konten{margin: 0;}
+    footer {width: 84%;}
+    footer #footer-column{width: 480px; overflow: auto;}
+ }
+ /* 480 */
+ @media screen and (max-width:480px) {
+    #wrapper { width: 100%;}
+    header #kepala #alamat{width: 100%;}
+    header #kepala #alamat p{text-align: center;}
+    #primary {width: 100%;}
+    
+    #midpoint {
+        height: 250px;
+    }
+    #midpoint #mars{
+        float: none;
+        width: 100%;
+    }
+
+    #midpoint #pendapat{
+        float: none;
+        width: 100%;
+    }
+    #content-wrapper{width: 90%;}
+    #content #column {width: 100%;}
+    #content #column #konten{margin: 0;}
+    footer {width: 100%; margin:0px; overflow: hidden;
+    padding-left: 10px;}
+    footer #footer-column{ margin-left: 10px; width: calc(100%-100px); overflow: hidden;}
+ }
