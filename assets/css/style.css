@@ -206,6 +206,10 @@ header #kepala #alamat p{
     float: left;
 }
 
+#midpoint #pendapat fieldset {
+    border-color : tomato;
+}
+
 /* content */
 #content {
     background-color: black;
@@ -214,13 +218,15 @@ header #kepala #alamat p{
 
 #content #column {
     width: 320px;
-    background-color: azure;
     float: left;
     margin: auto;
 }
 #content #column h2{
+    margin-left: -10px;
+    padding-left: 10px;
     background-color: black;
     color: white;
+    height: 36px;
 }
 
 #content #column #konten{
@@ -228,7 +234,7 @@ header #kepala #alamat p{
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
-    background-color: aqua;
+    background-color: whitesmoke;
 }
 
 #mini {
@@ -255,6 +261,11 @@ footer #footer-column{
     color: #ffffff;
     float: left;
     width: 33.3%;
+}
+
+footer #footer-column a{
+    text-decoration: underline;
+    color: #ffffff;
 }
 
 
