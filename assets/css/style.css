@@ -404,7 +404,10 @@ footer #footer-column a{
     #content #column #konten{margin: 0;}
     footer {width: 100%; margin:0px; overflow: hidden;
     padding-left: 10px;}
-    footer #footer-column{ margin-left: 10px; width: calc(100%-100px); overflow: hidden;}
+    footer #footer-column{ margin-left: 10px; width:100%; overflow: hidden;}
+    .search{width: 50%;}
+    #tags{width: 50%;}
+    #submit{float: right;}
  }
 
 .mySlides {display: none;}
