@@ -1,0 +1,220 @@
+<!doctype html>
+<!-- https://wireframe.cc/1KMR0K -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>SMA Negeri 12 Bandung</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
+    <link rel="shortcut icon" href="assets/images/logo-12-transparent-50px.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/col.css">
+    <link rel="stylesheet" href="assets\jquery-ui-1.12.1\jquery-ui.min.css"></script>
+    <script src="assets\jquery-ui-1.12.1\external\jquery\jquery.js"></script>
+    <script src="assets\jquery-ui-1.12.1\jquery-ui.min.js"></script>
+    <style type="text/css">
+        .f-nav{  /* To fix main menu container */
+            z-index: 9999;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+        </style>
+        <script>
+            /* jam */
+            $(document).ready(function(){
+                    setInterval(function(){
+                        var date = new Date();
+                        $('#tampilanJam').html("Jam Sekarang : "+date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}));
+                    },1000);
+
+            });
+
+            /* progres bar*/
+            $( function() {
+                var progressbar = $( "#progressbar" ),
+                    progressLabel = $( ".progress-label" );
+                    wrapper = $( "#wrapper" );
+                    awal = $( "#awal" );
+                    white = $("#white");
+                    progressbar.progressbar({
+                        value: false,
+                            change: function() {
+                                progressLabel.text( progressbar.progressbar( "value" ) + "%" );
+                                wrapper.hide();
+                            },
+                        complete: function() {
+                    progressLabel.text( "Complete!" );
+                    progressbar.hide();
+                    awal.hide();
+                    white.hide();
+                    wrapper.show();
+                    
+                }
+            });
+            function progress() {
+                var val = progressbar.progressbar( "value" ) || 0;
+                    progressbar.progressbar( "value", val + 2 );
+                if ( val < 99 ) {
+                    setTimeout( progress, 80 );
+                }
+            }
+                setTimeout( progress, 2000 );
+            } );
+
+
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}    
+                    for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+  </script>
+</head>
+
+<body> <!--
+    <div id="white">
+        <div id="progressbar">
+            <div class="progress-label">Loading...</div>
+        </div>
+    </div>-->
+    <div id="wrapper" class="clearfix">
+        <header>
+            <div id="jam">
+                <span id="tampilanJam"></span>
+            </div>
+            <div id="kepala">
+                <div id="logo">
+                    <img src="assets/images/logo-12-panjang.png">
+                </div>
+                <div id="alamat" class="clearfix">
+                    <p>Alamat :	Jl. Sekejati no 36, Bandung, West Java, Indonesia</p>
+                    <p>Telp. 022-7310256</p>
+                </div>
+            </div>
+        </header>
+        <nav id="primary">
+            <ul> 
+                <li>
+                    <a href="index.html">Home</a></li> 
+                    <li>
+                        Profil
+                        <ul class="submenu"> 
+                            <li><a href="guru.html">Daftar Guru</a></li> 
+                            <li><a href="tentang.html">Tentang</a></li>
+                        </ul>
+                    </li>
+                <li><a href="galeri.html">Galeri</a>
+                </li>
+            </ul>
+            <div class="search">
+            <label for="tags"></label>
+                <input id="tags">
+                <input type="submit" value="Cari">
+            </div>
+        </nav>
+        <div id="content-wrapper">
+            <div id="artikel">
+                <h2>
+                    Sambutan Kepala Sekolah
+                </h2>
+                <p>
+                    Assalamu'alaikum Wr. Wb.</p>
+<p>
+Salam sejahtera bagi kita semua
+</p>
+<p>
+Saya Suryana, kepala sekolah SMA Negeri 12 Bandung, ingin menyampaikan apa yang menjadi visi SMA Negeri 12 Bandung Dengan Iman dan Taqwa sebagai landasan segala aktifitas, berusaha mewujudkan lembaga yang ber-PRESTASI. Kami memiliki komitmen bagaimana anak-anak kami siswa siswi SMA Negeri 12 menjadi anak-anak yang memiliki kecerdasasan berbasis kecerdasan kami baik tidak dulu kecerdasan intelektual tapi kami mulai dulu dari kecerdasan spiritual, emosional dan intelektual.
+</p>
+<p>
+Di SMA Negeri 12 ini, anak-anak betul betul kami fasilitasi kami motivasi untuk juga bisa mengembangkan potensi-potensi dirinya tidak hanya dalam masalah akademik tetapi juga dalam non akademik. Hal ini terbukti alhamdulillah anak-anak delapan hampir tiap minggu kalau di dalam upacara penaikan bendera setiap hari senin, selalu saja anak-anak kami memperoleh kejuaraan-kejuaraan yang diselenggarakan baik di tingkat kota, provinsi, maupun nasional bahkan sampai ke internasional.
+</p>
+<p>
+Barangkali itu saja yang ingin saya sampaikan tentang bagaimana profil SMA Negeri 8 Bandung
+</p>
+<p>
+Terimakasih, wabillahitaufik wal hidayah
+</p>
+<p>
+Wassalamu'alaikum Wr. Wb
+                </p>
+            </div>
+            <div id="sidebar">
+                <div id="mars">
+                    Mars SMAN 12 Bandung
+                    <audio id="audio" src="assets/music/mars12.mp3" controls></audio> 
+                </div>
+                <div id="pendapat">
+                    <fieldset>
+                        <legend>Pendapat</legend>
+                        <p>Bagaimana tampilan web ini ?</p>
+                        <form class="pendapat">
+                            <label for="answer">Bagus</label>
+                            <input type="radio" name="answer" id="bagus">
+                            <label for="answer">Kurang</label>
+                            <input type="radio" name="answer" id="kurang">
+                            <button id="book" type="reset">Kirim</button>
+                        </form>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    <footer class="clearfix">
+            <div id="footer-column"> 
+                <h2>Tentang Sekolah</h2> 
+                <p>Sman 12 Bandung dulunya merupakan SMAN 3 Bandung, namun berpisah pada tahun 1980 dan berubah menjadi SMAN 12 bandung</p>
+
+            </div> 
+            <div id="footer-column"> 
+                <h2>Hubungi Kami</h2> 
+                <p>              
+                SMA NEGERI 12 BANDUNG
+                Jl. Sekejati no 36, Bandung, West Java, Indonesia 
+                </p>
+                <p>
+                 022-7310256</p>
+            </div> 
+            <div id="footer-column"> 
+                <h2>Temukan Saya di ...</h2> 
+                <a href="https://www.facebook.com/pages/Sman-12-Bandung/386359588231471" target="_BLANK">Facebook</a><br> 
+                <a href="https://twitter.com/sman12bdg"target="_BLANK" >Twitter</a> 
+            </div>
+        </footer>
+    <script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+</body>
+
+</html>
