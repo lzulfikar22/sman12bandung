@@ -74,6 +74,11 @@ header #kepala #alamat p{
     text-align: right;
     padding-right: 10px;
 }
+
+header #kepala #alamat a{
+    text-decoration: none;
+    color: #000000;
+}
 /*menu primary */
 .active-menu {
     background-color: #F1C7A3;
